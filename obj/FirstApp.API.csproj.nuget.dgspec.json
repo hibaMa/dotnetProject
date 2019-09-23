@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/hibamalhis/Desktop/dotnet core/FirstApp/FirstApp.API/FirstApp.API.csproj": {}
+    "/Users/hibamalhis/Desktop/dotnet core/FirstApp.API/FirstApp.API.csproj": {}
   },
   "projects": {
-    "/Users/hibamalhis/Desktop/dotnet core/FirstApp/FirstApp.API/FirstApp.API.csproj": {
+    "/Users/hibamalhis/Desktop/dotnet core/FirstApp.API/FirstApp.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hibamalhis/Desktop/dotnet core/FirstApp/FirstApp.API/FirstApp.API.csproj",
+        "projectUniqueName": "/Users/hibamalhis/Desktop/dotnet core/FirstApp.API/FirstApp.API.csproj",
         "projectName": "FirstApp.API",
-        "projectPath": "/Users/hibamalhis/Desktop/dotnet core/FirstApp/FirstApp.API/FirstApp.API.csproj",
+        "projectPath": "/Users/hibamalhis/Desktop/dotnet core/FirstApp.API/FirstApp.API.csproj",
         "packagesPath": "/Users/hibamalhis/.nuget/packages/",
-        "outputPath": "/Users/hibamalhis/Desktop/dotnet core/FirstApp/FirstApp.API/obj/",
+        "outputPath": "/Users/hibamalhis/Desktop/dotnet core/FirstApp.API/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -42,6 +42,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.8.0, )"
             },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",

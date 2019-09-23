@@ -11,6 +11,7 @@ namespace FirstApp.API.Data
          Task<User> getUser(int Id);
          Task<IEnumerable<User>> getUsers();
          Task<bool> saveAll();
+         Task<Photo> getPhoto(int id);
 
     }
 }

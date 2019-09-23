@@ -22,6 +22,11 @@ namespace FirstApp.API.Data
             context.Remove(entity);
         }
 
+        public async Task<Photo> getPhoto(int id)
+        {
+            return await context.Photos.FirstOrDefaultAsync(p => p.Id == id);
+        }
+
         public async Task<User> getUser(int Id)
         {
             return await context.Users.Include(u => u.Photos).FirstOrDefaultAsync(u => u.Id==Id);

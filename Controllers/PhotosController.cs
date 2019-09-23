@@ -40,6 +40,12 @@ namespace FirstApp.API.Controllers
         }
 
 
+        [HttpGet("{id}",Name="GetPhoto")]
+        public async Task<IActionResult> GetPhoto(int id){
+            var photo = await _repo.getPhoto(id);
+            return Ok(photo);
+        }
+
         [HttpPost]
         public async Task<IActionResult> AddPhotoForUser(int userId, [FromForm]PhotoForCreationDto photoForCreationDto)
         {
@@ -66,7 +72,7 @@ namespace FirstApp.API.Controllers
             }
 
             photoForCreationDto.Url = uploadResult.Uri.ToString();
-            photoForCreationDto.PublicId = uploadResult.PublicId;
+            photoForCreationDto.publicCloudinaryId = uploadResult.PublicId;
 
             var photo = _mapper.Map<Photo>(photoForCreationDto);
 
@@ -75,10 +81,9 @@ namespace FirstApp.API.Controllers
 
             userFromRepo.Photos.Add(photo);
 
-            if (await _repo.SaveAll())
+            if (await _repo.saveAll())
             {
-                var photoToReturn = _mapper.Map<PhotoForReturnDto>(photo);
-                return CreatedAtRoute("GetPhoto", new { id = photo.Id }, photoToReturn);
+                return CreatedAtRoute("GetPhoto", new { id = photo.Id }, photo);
             };
 
             return BadRequest("Could not add the photo");
